@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Mirapolis</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<ul class="tree-nav">
+		<li class="tree-nav__item open">
+			<button class="tree-nav__btn tree-btn-open tree-folder open">
+				Folder 1
+			</button>
+			<div class="tree-nav__icon tree-btn-open open"></div>
+			<ul class="tree-nav__body open">
+				<li class="tree-nav__file tree-file">Item 1</li>
+			</ul>
+		</li>
+		<li class="tree-nav__item open">
+			<button class="tree-nav__btn tree-folder open">
+				Folder 2
+			</button>
+			<div class="tree-nav__icon tree-btn-open open"></div>
+			<ul class="tree-nav__body open">
+				<li class="tree-nav__item open">
+					<button class="tree-nav__btn tree-btn-open tree-folder open">
+						subfolder 2.1
+					</button>
+					<div class="tree-nav__icon tree-btn-open open"></div>
+					<ul class="tree-nav__body open">
+						<li class="tree-nav__file tree-file">File 2.1.1</li>
+						<li class="tree-nav__file tree-file">File 2.1.2</li>
+					</ul>
+				</li>
+				<li class="tree-nav__file tree-file">File 2.2</li>
+			</ul>
+		</li>
+		<li class="tree-nav__item">
+			<button class="tree-nav__btn tree-btn-open tree-folder">
+				Folder 3 (closed at start)
+			</button>
+			<div class="tree-nav__icon tree-btn-open"></div>
+			<ul class="tree-nav__body">
+				<li class="tree-nav__file tree-file">Item 1</li>
+			</ul>
+		</li>
+		<li class="tree-nav__item">
+			<button class="tree-btn-open tree-file">
+				file 4
+			</button>
+		</li>
+	</ul>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html>

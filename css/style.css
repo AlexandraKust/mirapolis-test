@@ -1,0 +1,204 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*--------------------*/
+/*------ общие стили -------*/
+body {
+  font-family: sans-serif;
+}
+
+.tree-nav {
+  position: relative;
+  height: auto;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.tree-nav::before {
+  content: "";
+  width: 1px;
+  height: calc(100% - 14px);
+  border-left: 1px dotted black;
+  position: absolute;
+  left: 20px;
+  top: 0;
+  z-index: 5;
+}
+
+.tree-nav__item {
+  padding-left: 23px;
+  position: relative;
+}
+
+.tree-nav__item::before {
+  content: "";
+  width: 10px;
+  height: 1px;
+  border-top: 1px dotted black;
+  position: absolute;
+  left: 11px;
+  top: 8px;
+  z-index: 5;
+}
+
+.tree-nav__item.open {
+  padding-bottom: 5px;
+}
+
+.tree-nav__btn {
+  background: none;
+}
+
+.tree-nav__icon {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  z-index: 10;
+}
+
+.tree-nav__icon::before {
+  content: "";
+  width: 5px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.tree-nav__icon::after {
+  content: "";
+  width: 1px;
+  height: 5px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.tree-nav__icon.open::after {
+  display: none;
+}
+
+.tree-nav__body {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.tree-nav__body.open {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.tree-nav__body.open::before {
+  content: "";
+  width: 1px;
+  height: calc(100% - 13px);
+  border-left: 1px dotted black;
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  z-index: 5;
+}
+
+.tree-nav__file {
+  margin-left: 20px;
+  position: relative;
+}
+
+.tree-nav__file::before {
+  content: "";
+  width: 10px;
+  height: 1px;
+  border-top: 1px dotted black;
+  position: absolute;
+  left: -8px;
+  top: 8px;
+  z-index: 5;
+}
+
+.tree-folder {
+  background: url("../img/folder-icon.png") left center/16px auto no-repeat;
+  padding-left: 20px;
+  margin-bottom: 7px;
+}
+
+.tree-file {
+  background: url("../img/file-icon.png") left center/16px auto no-repeat;
+  padding-left: 20px;
+  margin-bottom: 7px;
+}
